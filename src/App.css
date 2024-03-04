@@ -2,39 +2,16 @@
 *{
     box-sizing: border-box;
     padding: 0;
+    
+}
+
+body{
+    background-color: black;
+}
+
+.app{
     margin:4px 6px ;
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.search , .logo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.search-container{
-    /* position: relative; */
-    padding:4%;
-    padding-left: 25px;
-}
-input{
-    padding:2%;
-    position: relative;
-    background: none;
-    outline: none;
-    border:none;
-}
-.search-icon{
-    position: absolute;
-    size: 15px;
-    top:10%;
-    left:42%;
-    color:blue;
-}
-
 
 .image-container img{
     width:202.89px;
@@ -42,4 +19,16 @@ input{
     top:654px;
     left:393.89px;
     border-radius:5px;
+}
+
+:root{
+    --themeColor:tomato;
+    --white:white;
+    --black:black;
+}
+
+.app > h1{
+    text-align: center;
+    margin:5% auto;
+    color:var(--themeColor)
 }

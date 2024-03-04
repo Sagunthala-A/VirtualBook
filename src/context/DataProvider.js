@@ -4,11 +4,15 @@ import React,{useState} from "react";
 const DataProvider = ({children})=>{
     const [search,setSearch] = useState('');
     const [movieList,setMovieList] = useState([]);
+    const [clickedBook,setClickedBook] = useState('');
+    const [network , setNetwork] = useState('true')
     
  
     return <DataContext.Provider value={{
         search,setSearch,
-        movieList,setMovieList
+        movieList,setMovieList,
+        clickedBook,setClickedBook,
+        network,setNetwork
     }}>
         {children}
     </DataContext.Provider>

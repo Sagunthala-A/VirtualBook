@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* position: sticky; */
+    /* top: 0; */
+    background-color: black;
+}
+
+.navbar > h1{
+    margin-left:40px;
+    font-weight: 500;
+    font-family: "Playball", cursive;
+    font-size: 40px;
+    color:var(--themeColor);
+    margin-right:100px;
+}
+
+.search {
+    flex:.8;
+    display: flex;
+    align-items: center;
+}
+.search-container{
+    padding:4%;
+}
+.search-container > input{
+    font-size: 20px;
+    padding:10px 20px;
+    width:40rem;
+    height: 3.5rem;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition: transform 200ms linear;
+    outline: none;
+}
+
+input:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.search >button{
+    padding:15px 40px;
+    border-radius:5px;
+    font-size: 19px;
+    color:var(--white);
+    background-color: var(--themeColor);
+    font-weight: 600;
+    border:none;
+    transition: transform 100ms linear;
+    
+}
+
+.search >button:hover{
+    transform: scale(1.03);
+}
+
+

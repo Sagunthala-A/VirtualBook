@@ -5,7 +5,8 @@ import DataProvider from './context/DataProvider';
 
 
 
-ReactDOM.render(<DataProvider>
+ReactDOM.render(
+<DataProvider>
     <App/>
 </DataProvider>
 ,document.getElementById('root'))
