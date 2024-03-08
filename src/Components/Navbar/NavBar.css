@@ -47,3 +47,19 @@
     margin-right: 0px;
 }
 }
+
+@media screen and (max-width:600px){
+    .navbar{
+        display:flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin: 0 auto;
+        margin-top:25px;
+    }
+    .navbar > h1{
+        font-size: 45px;
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

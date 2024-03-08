@@ -17,6 +17,7 @@
     transition: transform 200ms linear;
     outline: none;
     cursor: pointer;
+    min-width:7rem;
 }
 
 input:hover {
@@ -59,6 +60,17 @@ input:hover {
 @media screen and (max-width:768px){
 .search {
     flex:.9;
+}
+}
+
+@media screen and (max-width:600px){
+    .search {
+    flex:1;
+    width:90%;
+}
+
+.search >button{
+    padding:15px 13px;
 }
 
 }
