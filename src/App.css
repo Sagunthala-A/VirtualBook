@@ -2,23 +2,11 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    
+    /* margin:0; */
 }
 
 body{
     background-color: black;
-}
-
-.app{
-    margin:4px 6px ;
-}
-
-.image-container img{
-    width:202.89px;
-    height:299.22px;
-    top:654px;
-    left:393.89px;
-    border-radius:5px;
 }
 
 :root{
@@ -27,8 +15,46 @@ body{
     --black:black;
 }
 
-.app > h1{
-    text-align: center;
-    margin:5% auto;
-    color:var(--themeColor)
+.app{
+    /* margin:0; */
 }
+
+
+
+
+
+/* 
+media queries
+max-width - 1440px  -big screen pc ...no need to change 
+max-width - 1024 px -low screen pc 
+max width - 768px; - tablet
+max-width - 600px; -mobile
+
+*/
+
+
+/*
+Extra small devices (phones, 600px and down)
+
+==> @media only screen and (max-width: 600px) {...}
+
+Small devices (portrait tablets and large phones, 600px and up)
+==> @media only screen and (min-width: 600px) {...}
+
+Medium devices (landscape tablets, 768px and up)
+==> @media only screen and (min-width: 768px) {...}
+
+Large devices (laptops/desktops, 992px and up)
+==> @media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+==> @media only screen and (min-width: 1200px) {...}
+*/
+
+
+/* 
+max-width:1200px;
+max-width:992;
+max-width:768px;
+max-width:600px;
+ */

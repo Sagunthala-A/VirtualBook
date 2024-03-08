@@ -10,6 +10,7 @@ const Content = () => {
     
     function handleBook(book){
         console.log('Books',book)
+        
         setClickedBook(book);
     }
   return (
@@ -19,12 +20,15 @@ const Content = () => {
             <div className='content__clickedBook'>
                 <img src={clickedBook.volumeInfo.imageLinks.thumbnail}/>
                 <div className='content__clickedBookDetails'>
-                    <h1>{clickedBook.volumeInfo.title} <span style={{fontSize:"18px",color:"black",position:"absolute",right:"220px",marginTop:"15px"}}> - {clickedBook.volumeInfo.authors}</span></h1>
-                    <button className='content__closeBtn' onClick={()=>{setClickedBook(false)}}>X</button>
+                    <div className='content__clickedBookHeading'>
+                        <h1>{clickedBook.volumeInfo.title} </h1>
+                        <span> - {clickedBook.volumeInfo.authors}</span>
+                    </div>
+                    <button className='content__closeBtn' onClick={()=>{setClickedBook('')}}>X</button>
                     {/* <span style={{fontSize:"18px",color:"black",marginTop:"15px"}}>{clickedBook.volumeInfo.authors}</span> */}
                     <p>{clickedBook.volumeInfo.description}</p>
                     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginRight:"20px"}}>
-                        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",alignItems:"center",columnGap:"90px", color:"black",fontSize:"18px",fontWeight:"600"}}>
+                        <div className='content__additionalDetails'>
                             <p>Category: {clickedBook.volumeInfo.categories ? clickedBook.volumeInfo.categories :"Not found" }</p>
                             <p>Language: {clickedBook.volumeInfo.language}</p>
                             <p>Published on: {clickedBook.volumeInfo.publishedDate}</p>
@@ -43,7 +47,10 @@ const Content = () => {
             {
                 movieList.map((book)=>(
                     <div onClick={()=>{handleBook(book)}} className="image-container" key={book.id}>
-                        <img src={book.volumeInfo.imageLinks.thumbnail}/>
+                        
+                        {book.volumeInfo.imageLinks ?
+                        <img src={book.volumeInfo.imageLinks.thumbnail}/>:<h3 style={{color:"white"}}>BOOK NOT FOUND</h3>
+                        }
                     </div>
                 ))
             }
@@ -51,7 +58,7 @@ const Content = () => {
                 to='navbar'
                 smooth='true'
                 duration={700}
-                className='content__topIcon'
+                className='content__upArrow'
                 style={{}}
                 ><FaArrowAltCircleUp /></Link>
         </div>
