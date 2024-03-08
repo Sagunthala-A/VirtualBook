@@ -283,10 +283,11 @@
 .content__clickedBook{
     display:flex;
     flex-direction: column;
-    height:430px;
-    max-height: 500px;
+    height: auto;
+    padding-bottom:10px;
+    /* min-height:400px; */
     margin-bottom: 50px;
-    top:3px;
+    top:20px;
     width:90%;
     border-radius: 5px;
     background-color:rgb(255,255,255,.2);
@@ -296,6 +297,8 @@
 
 .content__clickedBookDetails{
     max-height:300px;
+    width:95%;
+    margin:0 auto;
 }
 
 .content__clickedBook >img{
@@ -312,17 +315,18 @@
     transform: scale(1) rotate(0deg);
     width:95%;
 }
+
 .content__upArrow{
     font-size: 60px;
     right:10px;
     bottom:-3px;
 }
+
 .content__closeBtn{
-    right:7px;
-    top:-170px;
+    right:-4px;
+    top:-160px;
     width:30px;
     height:30px;
 }
-
 
 }
