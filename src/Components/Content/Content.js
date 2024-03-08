@@ -9,8 +9,7 @@ const Content = () => {
     const {movieList,setMovieList,clickedBook,setClickedBook} = useContext(DataContext)
     
     function handleBook(book){
-        console.log('Books',book)
-        
+        // console.log("Book", book)
         setClickedBook(book);
     }
   return (

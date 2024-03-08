@@ -6,7 +6,7 @@ import { Element } from 'react-scroll';
 const NavBar= () => {
   return (
     <Element className='navbar' name='navbar'>
-      <h1>Book Finder</h1>
+      <h1>Book Navigator</h1>
         <Search/>
     </Element>
   )

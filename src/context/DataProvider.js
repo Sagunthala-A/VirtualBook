@@ -5,7 +5,7 @@ const DataProvider = ({children})=>{
     const [search,setSearch] = useState('');
     const [movieList,setMovieList] = useState([]);
     const [clickedBook,setClickedBook] = useState('');
-    const [network , setNetwork] = useState('true')
+    const [network , setNetwork] = useState('true');
     
  
     return <DataContext.Provider value={{
