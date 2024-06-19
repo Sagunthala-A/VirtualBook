@@ -330,3 +330,13 @@
 }
 
 }
+
+.noBooks__found{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+}

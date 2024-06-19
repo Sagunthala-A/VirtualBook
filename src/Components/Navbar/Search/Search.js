@@ -15,32 +15,34 @@ const Search = () => {
     // },[])
 
     useEffect(() => {
-    async function fetchData() {
-        try {
-            const response1 = await axios.get("https://www.googleapis.com/books/v1/volumes?q=harry+potter&maxResults=20");
-            const response2 = await axios.get("https://www.googleapis.com/books/v1/volumes?q=Sherlock+Holmes&maxResults=20");
-            setMovieList([...response2.data.items, ...response1.data.items]);
-            setNetwork(false);
-        } catch (error) {
-            // Handle errors here
-            console.error("Error fetching data:", error);
-        }
-    }
-
     fetchData();
-
 }, []);
 
+async function fetchData() {
+  try {
+    const response1 = await axios.get(
+      "https://www.googleapis.com/books/v1/volumes?q=harry+potter&maxResults=6"
+    );
+    const response2 = await axios.get(
+      "https://www.googleapis.com/books/v1/volumes?q=Sherlock+Holmes&maxResults=8"
+    );
+    setMovieList([...response2.data.items, ...response1.data.items]);
+    setNetwork(false);
+  } catch (error) {
+    // Handle errors here
+    console.error("Error fetching data:", error);
+  }
+}
 
     async function handleSearch(e){
         e.preventDefault();
         try{
-            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=30`)
+            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=10`)
             // `https://www.googleapis.com/books/v1/volumes?q=${term}&maxResults=11`
             setMovieList(response.data.items);
+            setNetwork(false);
         }catch(err){
-            console.log(err)
-            console.log("SDA")
+            console.log(err);
         }
     }
 
